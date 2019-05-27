@@ -1,15 +1,11 @@
 package com.dimple.effectiveJava.chapter2;
 
-import jdk.internal.util.xml.impl.Input;
-
 import java.io.BufferedReader;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.text.MessageFormat;
 
 /**
  * @className: Item9
