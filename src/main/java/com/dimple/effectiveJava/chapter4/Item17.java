@@ -1,6 +1,5 @@
 package com.dimple.effectiveJava.chapter4;
 
-import com.sun.org.apache.regexp.internal.RE;
 
 /**
  * @className: Item17

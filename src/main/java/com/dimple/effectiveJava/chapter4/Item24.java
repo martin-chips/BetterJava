@@ -1,6 +1,5 @@
 package com.dimple.effectiveJava.chapter4;
 
-import com.sun.xml.internal.bind.v2.model.core.ID;
 
 /**
  * @className: Item24

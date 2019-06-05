@@ -1,6 +1,10 @@
 package com.dimple;
 
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.EnumSet;
+import java.util.Locale;
 
 /**
  * Hello world!
@@ -11,8 +15,20 @@ enum Season {
 
 public class App {
     public static void main(String[] args) {
-        //创建一个EnumSet的集合，集合元素就是season的全部枚举值
-        EnumSet es1 = EnumSet.allOf(Season.class);
-        System.out.println(es1);
+        System.out.println(formatCurrency("$0.00", 65326));
+        System.out.println(formatCurrency(new BigDecimal("888888860.5326"),0,Locale.getDefault()));
+        System.out.println(String.valueOf(new BigDecimal("456")));
+    }
+
+    public static String formatCurrency(String pattern, double value) {
+        NumberFormat format = new DecimalFormat(pattern);
+        return format.format(value);
+    }
+
+    public static String formatCurrency(BigDecimal money, int scale, Locale locale) {
+        money = money.setScale(scale, BigDecimal.ROUND_HALF_UP);
+        NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(locale.getCountry().equals("CA") ? Locale.US : locale);
+        currencyFormat.setMaximumFractionDigits(scale);
+        return currencyFormat.format(money);
     }
 }
