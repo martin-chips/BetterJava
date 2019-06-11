@@ -1,4 +1,4 @@
-package com.dimple.effectiveJava.chapter6;
+package com.dimple.effectiveJava.chapter8;
 
 /**
  * @className: Item51
