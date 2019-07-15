@@ -1,5 +1,7 @@
 package com.dimple.effectiveJava.chapter6;
 
+import com.dimple.effectiveJava.chapter6.myInterface.ExceptionTest;
+
 /**
  * @className: Item39
  * @description: 注解优于命名模式
@@ -10,4 +12,10 @@ package com.dimple.effectiveJava.chapter6;
  * @version: 1.0
  */
 public class Item39 {
+
+    @ExceptionTest(IndexOutOfBoundsException.class)
+    @ExceptionTest(NullPointerException.class)
+    public static void doubleBad() {
+
+    }
 }

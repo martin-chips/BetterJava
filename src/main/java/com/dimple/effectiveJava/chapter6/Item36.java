@@ -13,14 +13,27 @@ import java.util.Set;
  * @version: 1.0
  */
 public class Item36 {
+    public static final int STYLE_BOLD = 1 << 0;
+    public static final int STYLE_ITALIC = 1 << 1;
+    public static final int STYLE_UNDERLINE = 1 << 2;
+    public static final int STYLE_STRIKETHROUGH = 1 << 3;
+
     public enum Style {BOLD, ITALIC, UNDERLINE, STRINERHROUGH,}
 
     public void applyStyles(Set<Style> styles) {
 
     }
 
+    public void applyStyle(int style) {
+        //do other things
+        System.out.println(style);
+    }
+
     public static void main(String[] args) {
         Item36 item36 = new Item36();
         item36.applyStyles(EnumSet.of(Style.UNDERLINE, Style.ITALIC));
+
+        //|表示按位逻辑或
+        item36.applyStyle(STYLE_ITALIC | STYLE_UNDERLINE);
     }
 }
