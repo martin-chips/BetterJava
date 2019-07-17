@@ -1,6 +1,8 @@
 package com.dimple.effectiveJava.chapter8;
 
 import java.math.BigInteger;
+import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -29,13 +31,14 @@ public class Item49 {
     }
 
     private static void sort(long[] a, int offset, int length) {
+        assert (offset > 0);
         assert (a == null);
         assert offset >= 0 && offset <= a.length;
     }
 
     public static void main(String[] args) {
         try {
-            sort(null, 0, 0);
+            sort(null, -1, 0);
         } catch (Exception e) {
             e.printStackTrace();
         }
